@@ -1,9 +1,13 @@
 {
+  "homepage": "https://iamshubhshrma.github.io/guilty-gossip",
   "name": "guilty-gossip",
   "version": "1.0.0",
   "description": "guilty gossips  of all of you",
   "main": "gp.js",
   "scripts": {
+    "build":"nodemon app.js",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shubham",
@@ -12,6 +16,7 @@
     "ejs": "^3.1.9",
     "ejs-mate": "^4.0.0",
     "express": "^4.18.2",
+    "gh-pages": "^6.1.1",
     "joi": "^17.12.1",
     "method-override": "^3.0.0",
     "mongoose": "^8.1.0",
