@@ -1,0 +1,130 @@
+body{
+    font-size:1.5em;
+    cursor:default;
+    width:90%;
+    margin:auto;
+    /* background: rgb(236, 186, 116); */
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+#nav_ul{
+    display: flex;
+    
+}
+
+.nav_a{
+    color:white;
+}
+
+.nav_li{
+    margin-left: 1em;
+    
+
+}
+header{
+    background-color: black;
+    color:white;
+    display: flex;
+    width: 95%;
+    margin-inline: auto;
+    justify-content: space-between;
+    margin: 1em;
+    position: sticky;
+    border-radius: 5%;
+}
+#homespan{
+    padding:1em;
+    margin: 0 1em;
+}
+
+.postbox{
+    margin: 3em;
+    background-color: black;
+    color:white;
+    padding: 1em;
+    border-radius: 5%;
+    
+}
+
+#contentbody{
+    display:grid;
+    grid-template-columns: 2.5fr 5fr 2.5fr;
+    width:80%;
+    margin:auto;
+    
+}
+#postblock{
+    margin:1em;
+    border : solid 2px black;
+    border-radius: 5%;
+    
+}
+#randomblock{
+
+}
+#trendyblock{
+
+}
+
+.contentbox{
+    padding:2em;
+    border : solid 2px black;
+    border-radius: 5%;
+ 
+}
+
+.contentbox li{
+    color:white;
+    background-color: black;
+    padding:1em;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    margin-left: 0.3em;
+    font-size:1.2em;
+}
+
+a:hover{
+    color:blue;
+    
+}
+.postbox form{
+    display:inline;
+    align-items: center;
+}
+.postbox div{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+button{
+    padding:0.2em;
+    font-size:1em;
+    border-radius:10%;
+    border:none;
+    background:none;
+    color:white;
+}
+.deletebutton:hover{
+    color: red;
+}
+
+.likebutton:hover{
+    color:blue;
+
+}
+
+input{
+    height:2.5em;
+    
+}

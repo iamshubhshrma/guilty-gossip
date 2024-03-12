@@ -1,0 +1,22 @@
+<% layout('boilerplate') %>
+<%- include('header') %>
+<link rel="stylesheet" href="gp.css">
+<div class="postbox">
+    <form action="/newuser" method="post">
+        <label for="name">User name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name"><br>
+        <br><br>
+        <label for="cnum">Contact Number</label>
+        <input type="number" name="cnum" id="cnum" placeholder="Enter your contact number"><br>
+        <br><br>
+        <label for="email">Email address</label>
+        <input type="text" name="email" id="email" placeholder="Enter your email"><br>
+        <br><br>
+        <button>submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

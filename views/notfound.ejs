@@ -1,0 +1,10 @@
+<% layout('boilerplate.ejs') %>
+<link rel="stylesheet" href="../../gp.css">
+<%- include('header.ejs') %>
+<div class="contentbox">
+    <h1>we cannot <%= action %> the <%= thing %>. <%= message %></h1>
+    <% if(err){ %>
+        <p><%= err %></p>
+    <% } %>
+
+</div>

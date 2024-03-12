@@ -1,0 +1,72 @@
+<% layout('boilerplate.ejs') %>
+<link rel="stylesheet" href="gp.css">
+
+<%- include('header') %>
+    <!-- <header>
+        <span id="homespan"><a href="/">home</a></span>
+        <nav>
+            <ul id="nav_ul">
+                <li class="nav_li"><a href="/newpost">new post</a></li>
+                <li class="nav_li"><a href="/newuser">add user</a></li>
+                <li class="nav_li" ><a href="#">random</a>
+                   
+                </li>
+                <li class="nav_li"><form action="#" method="get"><input type="text" name="searchbox" placeholder="search gossip" id=""><button>search</button></form></li>
+            </ul>
+        </nav>
+    </header> -->
+    <div id="contentbody">
+        <div id="randomblock">
+            <div class="contentbox">
+                <h2>Random thought of the day</h2>
+                <p>there should be no delay in doing the work that must be done</p>
+            </div>
+        </div>
+        <div id="postblock">
+            <% for(let post of allposts){ %>
+                <div class="postbox">
+                    <h1><%= post.user %></h1>
+                    <p><%= post.post %></p>
+                    <div>
+                        <form action="/post/<%= post._id %>/like?_method=PUT" method="post">
+                            <button class="likebutton"><i class="fa-solid fa-heart"></i><%= post.likes %></button>                    
+                        </form>
+                    
+                        <!-- <a href="/post/<%= post._id %>/like" class="likebutton"></a> -->
+                        <form class="delform" action="/post/<%= post._id %>/delete?_method=DELETE" method="post"><button class="deletebutton"><i class="fa-solid fa-trash"></i></button><span class="deletebutton"></span></form>
+                        <a href="/post/<%= post._id %>"> view</a>
+                    </div>
+                    
+                </div>
+            <% } %>
+        </div>
+        <div id="trendyblock">
+            <div class="contentbox">
+                <h2>Todays trendy gossips</h2>
+                <!-- <ul> -->
+                    <li>wtf</li>
+                    <li>i don't know bro</li>
+                    <li>bro that's fucking insane</li>
+                    <li>omg is that true</li>
+                    <li>why would you say that</li>
+                <!-- </ul> -->
+
+            </div>
+            
+        </div>
+    </div>
+    <div>
+
+    </div>
+
+<!-- navbar will have:
+home
+sort by
+search
+new gossip
+it will have a post section 
+--each post will have
+posted by
+text box
+tags
+it will have a trendy section -->

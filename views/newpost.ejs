@@ -1,0 +1,18 @@
+<% layout('boilerplate') %>
+<%- include('header') %>
+<link rel="stylesheet" href="gp.css">
+<div class="postbox">
+    <form action="/newpost" method="post">
+        <label for="name">User name</label>
+        <input type="text" name="user" id="name" placeholder="Enter your name"><br>
+        <br><br>
+        <label for="postcontent"></label>
+        <textarea name="post" id="postcontent" cols="60" rows="20" placeholder="What's on your mind?"></textarea><br><br><br>
+        <button>submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
