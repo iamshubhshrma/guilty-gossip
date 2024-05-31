@@ -3,6 +3,7 @@ const person = 'none';
 const flash = require('connect-flash');
 const { qarray } = require('../quotes.js');
 const MongoStore = require('connect-mongo');
+const dbUrl = process.env.db_url;
 module.exports.homefunction = async(req,res)=>{
     const allposts = await gossip.find({}).populate('user');
   
@@ -74,7 +75,7 @@ module.exports.sessionOptions = {
         expires: Date.now() + 1000*60*60*24*7
     },
     secret : 'thisisasecret',
-    store : MongoStore.create({mongoUrl:'mongodb://127.0.0.1:27017/gossip'})
+    store : MongoStore.create({mongoUrl:`${dbUrl}`})
 
 }
 
