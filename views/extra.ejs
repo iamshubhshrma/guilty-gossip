@@ -1,0 +1,17 @@
+<li id="userbutton">
+    <div class="dropdown">
+        <ul>
+            <% for(let user of allusers){%>
+                <li class="username"><%= user.name %></li>
+            <% }
+        </ul>
+    </div>
+    <i class="fa-solid fa-user"></i> <%= person %>
+
+</li>
+
+<div>
+    <p id="posted"><%= posted %></p>
+    <p id="deleted"><%= deleted %></p>
+    <p><%= messages %></p>
+</div>

@@ -1,0 +1,30 @@
+<% layout('boilerplate') %>
+<%- include('header') %>
+<link rel="stylesheet" href="../gp.css">
+<div>
+    <p class="success"><%= success %></p>
+    <p class="failure"><%= failure %></p>
+</div>
+<div class="postbox">
+    <form action="/user/sign-up" method="post">
+        <label for="name">User name</label>
+        <input type="text" name="username" id="name" placeholder="Enter your name"><br>
+        <br><br>
+        <label for="userpassword">Enter password</label>
+        <input type="password" id="userpassword" placeholder="Enter password" name="password">
+        <br><br><br>
+        <label for="cnum">Contact Number</label>
+        <input type="number" name="cnum" id="cnum" placeholder="Enter your contact number"><br>
+        <br><br>
+        <label for="email">Email address</label>
+        <input type="text" name="email" id="email" placeholder="Enter your email"><br>
+        <br><br>
+        <label for="userbio">bio</label><br><br>
+        <textarea name="bio" id="userbio" cols="60" rows="20" placeholder="tell people what's interesting about you"></textarea><br><br><br>
+        <button>submit</button>
+
+    </form>
+
+</div>
+
+

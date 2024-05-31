@@ -1,0 +1,22 @@
+<% layout('boilerplate') %>
+<link rel="stylesheet" href="../gp.css">
+<!-- <script src="gp.js"></script> -->
+<%- include('header') %>
+<div>
+    <p class="success"><%= success %></p>
+    <p class="failure"><%= failure %></p>
+</div>
+<div class="postbox">
+    <form action="/user/login" method="post">
+        <label for="name">User name</label>
+        <input type="text" name="username" id="name" placeholder="Enter your name"><br>
+        <br><br>
+        <label for="userpassword">Enter password</label>
+        <input type="password" id="userpassword" placeholder="Enter password" name="password">
+        <br><br><br>
+        
+        <button>submit</button>
+
+    </form>
+
+</div>

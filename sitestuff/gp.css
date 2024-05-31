@@ -1,0 +1,212 @@
+body{
+    font-size:1.5em;
+    cursor:default;
+    margin:auto;
+    /* background: rgb(236, 186, 116); */
+    
+}
+h1{
+    font-size:1.4em;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+#nav_ul{
+    display: flex;
+    
+}
+
+.nav_a{
+    color:white;
+}
+
+.nav_li{
+    margin-left: 1em;
+    
+
+}
+header{
+    background-color: black;
+    color:white;
+    display: flex;
+    width: 85%;
+    margin-inline: auto;
+    justify-content: space-between;
+    margin: 1em auto;
+    position: sticky;
+    border-radius: 5%;
+}
+#homespan{
+    padding:1em;
+    margin: 0 1em;
+}
+
+.postbox{
+    margin: 3em;
+    background-color: black;
+    color:white;
+    padding: 1em;
+    border-radius: 5%;
+
+    
+}
+
+#contentbody{
+    display:grid;
+    grid-template-columns: 2.5fr 5fr 2.5fr;
+    width:85%;
+    margin:auto;
+    
+}
+#postblock{
+    margin:1em;
+    border : solid 2px black;
+    border-radius: 5%;
+    
+}
+#randomblock{
+
+}
+#trendyblock{
+
+}
+
+.contentbox{
+    padding:2em;
+    border : solid 2px black;
+    border-radius: 5%;
+ 
+}
+
+.contentbox li{
+    color:white;
+    background-color: black;
+    padding:1em;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    margin-left: 0.3em;
+    font-size:1.2em;
+}
+
+a:hover{
+    color:blue;
+    
+}
+.postbox form{
+    display:inline;
+    align-items: center;
+}
+/* .postbox div{
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+} */
+
+.postaction{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.postimage{
+    width:80%;
+    display:flex;
+    align-items:stretch;
+}
+
+.postimage img{
+    padding:5%;
+    width:100%;
+    height:auto;
+    margin:auto;
+}
+
+button{
+    padding:0.2em;
+    font-size:1em;
+    border-radius:10%;
+    border:none;
+    background:none;
+    color:white;
+}
+.deletebutton:hover{
+    color: red;
+}
+
+.likebutton:hover{
+    color:blue;
+
+}
+
+input{
+    height:2.5em;
+    
+}
+
+
+.dropdown{
+    display:none;
+    position:absolute;
+    background-color: rgb(224, 223, 210);
+    color : blue;
+    z-index:1;
+    width:5em;
+    font-size:1em;
+    border-radius: 5%;
+    width:auto;
+    padding:1em;
+}
+
+.username:hover{
+    background-color: blue;
+    color:white;
+
+}
+
+footer{
+    background-color: black;
+    color: white; 
+}
+
+footer p{
+    padding : 2em;
+}
+
+.success{
+    background-color: green;
+    color:white;
+    text-align: center;
+}
+
+.failure{
+    background-color: red;
+    color:white;
+    text-align: center;
+}
+
+
+
+#userbutton{
+    margin:0 1em;
+    
+    
+}
+
+#usericon{
+    border:3px solid white;
+    border-radius:50%;
+    padding:0.5em;
+}
+
+#posttags{
+    width:60em;
+}

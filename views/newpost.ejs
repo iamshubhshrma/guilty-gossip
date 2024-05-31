@@ -1,0 +1,23 @@
+<% layout('boilerplate') %>
+<%- include('header') %>
+<link rel="stylesheet" href="../gp.css">
+<div class="postbox">
+    <h1>
+        <i class="fa-solid fa-user" id="usericon"></i>
+        <%= username %>
+    </h1>
+    <form action="/post/newpost" method="post" enctype="multipart/form-data">
+        <label for="postcontent"></label>
+        <textarea name="post" id="postcontent" cols="60" rows="20" placeholder="What's on your mind?"></textarea><br><br><br>
+        <label for="posttags">tags : </label>
+        <input type="text" id="posttags" placeholder="Enter tagnames seperated by commas" name="tagsstring">
+        <br><br><br>
+        <label for="postimage">Add Image : </label><br><br>
+        <input type="file" id="postimage" name="image">
+        <br><br><br>
+        <button>submit</button>
+
+    </form>
+
+</div>
+

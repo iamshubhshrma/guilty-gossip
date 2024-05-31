@@ -1,0 +1,14 @@
+--- app.js	2024-05-29 11:19:41.868683232 +0530
++++ app1.js	2024-05-29 21:23:21.577592123 +0530
+@@ -1,11 +1,3 @@
+-//setting up .env so that secret info is not available on website
+-if(process.env.NODE_ENV !== "production"){
+-    require('dotenv').config();
+-}
+-console.log(process.env.SECRET);
+-
+-
+-
+ 
+ //setting up express app and listening on the port
+ const express = require('express');

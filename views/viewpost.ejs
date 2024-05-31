@@ -1,0 +1,65 @@
+<% layout('boilerplate') %>
+<link rel="stylesheet" href="../../gp.css">
+<script src="../../gp.js"></script>
+<%- include('header') %>
+    
+       
+<div class="postbox" style="width: 60%;margin-bottom:10%;">
+    <h1>
+        <i class="fa-solid fa-user" id="usericon"></i>
+        <%= foundpost.user.username %>
+    </h1>
+    <p><%=foundpost.post%></p><br>
+    <p>
+        <% for(let tag of foundpost.tags){%>
+            <b>#<%= tag %> </b>
+        <% } %>
+
+    </p>
+    <h2>
+        <form action="/post/<%= foundpost._id %>/like?_method=PUT" method="post">
+            <button class="likebutton"><i class="fa-solid fa-heart"></i><%= foundpost.likes %></button>                    
+        </form>
+        <% if(currentuser&&currentuser._id.equals(foundpost.user._id)){ %>
+            <form class="delform" action="/post/<%= foundpost._id %>/delete?_method=DELETE" method="post">
+                <button class="deletebutton"><i class="fa-solid fa-trash"></i></button>
+            </form>
+        <% } %>
+    </h2>
+    <h2>
+        <a href="/">back</a>
+        <% if(currentuser&&currentuser._id.equals(foundpost.user._id)){ %>
+            <a href="/post/<%= foundpost._id %>/edit"> edit</a>
+        <% } %>
+    </h2>
+
+
+    <div class="postimage">
+        <% if(foundpost.image){ %>
+            <a href="<%= foundpost.image.url %>"><img src="<%= foundpost.image.url %>"></a>
+        <% } %>
+    </div>
+</div>
+            
+ 
+
+<style>
+
+    .postbox{
+        width:60%;
+        margin:auto;
+        padding:5em;
+
+    }
+    h1{
+        font-size:3em;
+    }
+    p{
+        font-size:2em;
+    }
+
+    a{
+        font-size:1.1em;
+    }
+    
+</style>

@@ -1,0 +1,37 @@
+<% layout('boilerplate') %>
+<link rel="stylesheet" href="../../gp.css">
+<script src="../../gp.js"></script>
+<%- include('header') %>
+
+<div class="postbox">
+    <h1>
+        <i class="fa-solid fa-user" id="usericon"></i>
+        <%= founduser.username %>
+    </h1>
+    <p><%=founduser.bio%></p><br><br>
+    <p>Email : <%= founduser.email %></p>
+    <p>Contact number : <%= founduser.cnum %></p>
+
+    <h2><a href="/">back</a></h2>
+</div>
+
+<style>
+
+    .postbox{
+        width:60%;
+        margin:auto;
+        padding:5em;
+
+    }
+    h1{
+        font-size:3em;
+    }
+    p{
+        font-size:2em;
+    }
+
+    a{
+        font-size:1.1em;
+    }
+    
+</style>

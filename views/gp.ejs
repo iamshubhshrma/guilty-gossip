@@ -1,0 +1,66 @@
+<% layout('boilerplate.ejs') %>
+<link rel="stylesheet" href="gp.css">
+
+<%- include('header') %>
+<div>
+    <p class="success"><%= success %></p>
+    <p class="failure"><%= failure %></p>
+</div>
+    <div id="contentbody">
+        <div id="randomblock">
+            <div class="contentbox">
+                <h2>Words of Wisdom</h2>
+                <h3><%= thoughtd.quote %></h3>
+                <p>By <%= thoughtd.author %></p>
+            </div>
+        </div>
+        <div id="postblock">
+            
+            
+            <% for(let post of allposts){ %>
+                <div class="postbox">
+                    <div class="postcontent">
+                        <h1>
+                            <i crossorigin="anonymous" class="fa-solid fa-user" id="usericon"></i>
+                            <a href="/user/view/<%= post.user._id %>"><%= post.user.username %></a>
+                        </h1>
+                        <p><%= post.post %></p>
+                    </div>
+                    <div class="postaction">
+                        <form action="/post/<%= post._id %>/like?_method=PUT" method="post">
+                            <button class="likebutton"><i crossorigin="anonymous" class="fa-solid fa-heart"></i><%= post.likes %></button>                    
+                        </form>
+                        <% if(currentuser&&currentuser._id.equals(post.user._id)){ %>
+                            <form class="delform" action="/post/<%= post._id %>/delete?_method=DELETE" method="post">
+                                <button class="deletebutton"><i crossorigin="anonymous" class="fa-solid fa-trash"></i></button>
+                            </form>
+                        <% } %>
+                        <a href="/post/<%= post._id %>"> view</a>
+                    </div>
+                    <div class="postimage">
+                        <% if(post.image){ %>
+                            <a href="<%= post.image.url %>"><img crossorigin="anonymous" src="<%= post.image.url %>"></a>
+                        <% } %>
+                    </div>
+
+                </div>
+            <% } %>
+        </div>
+        <div id="trendyblock">
+            <div class="contentbox">
+                <h2>Todays trendy gossips</h2>
+                <!-- <ul> -->
+                    <li>wtf</li>
+                    <li>i don't know bro</li>
+                    <li>bro that's fucking insane</li>
+                    <li>omg is that true</li>
+                    <li>why would you say that</li>
+                <!-- </ul> -->
+
+            </div>
+            
+        </div>
+    </div>
+    <div>
+    </div>
+<%- include('footer') %>

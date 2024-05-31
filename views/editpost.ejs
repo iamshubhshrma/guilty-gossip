@@ -1,0 +1,20 @@
+<%- include('header') %>
+<link rel="stylesheet" href="../../../gp.css">
+<div class="postbox">
+    <h1>
+        <i class="fa-solid fa-user" id="usericon"></i>
+        <%= username %>
+    </h1>
+    <form action="/post/<%= foundpost._id %>/edit?_method=PUT" method="post">
+
+        <label for="postcontent"></label>
+        <textarea name="post" id="postcontent" cols="60" rows="20" placeholder="What's on your mind?" ><%= foundpost.post %></textarea><br><br><br>
+        <button>submit</button>
+
+    </form>
+
+
+</div>
+
+</body>
+</html>
